@@ -53,11 +53,9 @@ body{
   border:1px solid rgba(0,229,255,.35);
   backdrop-filter:blur(14px);
 }
-
-/* PERFECT CIRCLE IMAGE */
 .avatar-wrap{
   width:130px;
-  height:130px;          /* aspect-ratio ke saath bhi ok, but safe */
+  height:130px;        /* 🔑 width = height */
   border-radius:50%;
   padding:4px;
   background:linear-gradient(135deg,#00e5ff,#22d3ee);
@@ -65,18 +63,18 @@ body{
   align-items:center;
   justify-content:center;
   box-shadow:0 0 30px rgba(0,229,255,.6);
-  overflow:hidden;       /* 🔥 VERY IMPORTANT */
+  overflow:hidden;     /* 🔥 mandatory */
 }
 
 .avatar-wrap img{
   width:100%;
   height:100%;
-  border-radius:50%;     /* ✅ correct */
+  border-radius:50%;
   object-fit:cover;
   object-position:center;
   display:block;
-  background:#000;
 }
+
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce){
