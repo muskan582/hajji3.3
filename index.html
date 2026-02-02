@@ -1,12 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hurariah Capital</title>
-
-<link rel="icon" type="image/x-icon" href="/static/favicon.ico">
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,15 +19,13 @@
 <!-- Anime.js -->
 <script defer src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
 
-
 <script>
 tailwind.config = {
   theme: {
     extend: {
       colors: {
         primary:'#00e5ff',
-        secondary:'#22d3ee',
-        dark:'#000000'
+        secondary:'#22d3ee'
       }
     }
   }
@@ -59,6 +54,28 @@ body{
   backdrop-filter:blur(14px);
 }
 
+/* PERFECT CIRCLE IMAGE */
+.avatar-wrap{
+  width:130px;
+  aspect-ratio:1/1;
+  border-radius:50%;
+  padding:4px;
+  background:linear-gradient(135deg,#00e5ff,#22d3ee);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 0 30px rgba(0,229,255,.6);
+}
+.avatar-wrap img{
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  object-fit:cover;
+  object-position:center;
+  display:block;
+  background:#000;
+}
+
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce){
   *{animation:none!important;transition:none!important;}
@@ -70,92 +87,85 @@ body{
 
 <div class="w-full max-w-md text-center py-10 space-y-7">
 
-<!-- PROFILE -->
-<div class="flex flex-col items-center space-y-4">
-  <div class="rounded-full p-1 ring-4 ring-primary">
-    <img src="https://gogamex.fun/wp-content/uploads/2026/02/photo_2026-01-22_12-33-55.jpg"
-         width="110" height="110"
-         class="rounded-full object-cover"
-         loading="lazy">
+  <!-- PROFILE -->
+  <div class="flex flex-col items-center space-y-4">
+    <div class="avatar-wrap">
+      <img
+        src="https://gogamex.fun/wp-content/uploads/2026/02/photo_2026-01-22_12-33-55.jpg"
+        alt="Hafiz Aarif Habibi"
+        loading="lazy">
+    </div>
+
+    <h1 class="text-2xl sm:text-3xl font-bold text-primary">
+      Hafiz Aarif Habibi™
+    </h1>
+
+    <div class="flex items-center gap-2 text-sm text-secondary">
+      <i data-feather="users" class="w-4 h-4"></i>
+      <span>90,000+ Subscribers</span>
+    </div>
+
+    <div class="flex gap-2">
+      <span class="px-4 py-1 text-xs rounded-full bg-sky-900">Elite Analysis</span>
+      <span class="px-4 py-1 text-xs rounded-full bg-cyan-900">Live Updates</span>
+    </div>
   </div>
 
-  <h1 class="text-2xl sm:text-3xl font-bold text-primary">
-    Hafiz Aarif Habibi™
-
-  </h1>
-
-  <div class="flex items-center gap-2 text-sm text-secondary">
-    <i data-feather="users" class="w-4 h-4"></i>
-    <span>90,000+ Subscribers</span>
+  <!-- STATS -->
+  <div class="grid grid-cols-3 gap-4">
+    <div class="glass rounded-xl p-4">
+      <div class="text-primary text-lg font-bold">90K+</div>
+      <div class="text-xs text-gray-300 mt-1">Members</div>
+    </div>
+    <div class="glass rounded-xl p-4">
+      <div class="text-secondary text-lg font-bold">High</div>
+      <div class="text-xs text-gray-300 mt-1">Accuracy</div>
+    </div>
+    <div class="glass rounded-xl p-4">
+      <div class="text-primary text-lg font-bold">4.9★</div>
+      <div class="text-xs text-gray-300 mt-1">Rating</div>
+    </div>
   </div>
 
-  <div class="flex gap-2">
-    <span class="px-4 py-1 text-xs rounded-full bg-sky-900">Elite Analysis</span>
-    <span class="px-4 py-1 text-xs rounded-full bg-cyan-900">Live Updates</span>
-  </div>
-</div>
+  <!-- CTA -->
+  <a href="https://t.me/+zmFHtI8Orr8yZTE1" target="_blank"
+     class="flex items-center justify-center gap-2 w-full py-4 rounded-xl
+            text-lg font-bold bg-gradient-to-r from-primary to-secondary
+            shadow-xl shadow-cyan-500/40 active:scale-95">
+    <i data-feather="send"></i>
+    JOIN NOW FOR FREE
+  </a>
 
-<!-- STATS -->
-<div class="grid grid-cols-3 gap-4">
-  <div class="glass rounded-xl p-4">
-    <div class="text-primary text-lg font-bold">90K+</div>
-    <div class="text-xs text-gray-300 mt-1">Members</div>
+  <!-- TRUST -->
+  <div class="glass rounded-xl p-4 flex justify-between text-xs">
+    <div class="flex flex-col items-center gap-1">
+      <i data-feather="check-circle" class="text-green-400"></i>Verified
+    </div>
+    <div class="flex flex-col items-center gap-1">
+      <i data-feather="lock" class="text-primary"></i>Secure
+    </div>
+    <div class="flex flex-col items-center gap-1">
+      <i data-feather="trending-up" class="text-secondary"></i>Growth
+    </div>
+    <div class="flex flex-col items-center gap-1">
+      <i data-feather="star" class="text-primary"></i>Top Rated
+    </div>
   </div>
-  <div class="glass rounded-xl p-4">
-    <div class="text-secondary text-lg font-bold">High</div>
-    <div class="text-xs text-gray-300 mt-1">Accuracy</div>
-  </div>
-  <div class="glass rounded-xl p-4">
-    <div class="text-primary text-lg font-bold">4.9★</div>
-    <div class="text-xs text-gray-300 mt-1">Rating</div>
-  </div>
-</div>
 
-<!-- CTA -->
-<a href="https://t.me/+zmFHtI8Orr8yZTE1" target="_blank"
-   class="flex items-center justify-center gap-2 w-full py-4 rounded-xl
-          text-lg font-bold bg-gradient-to-r from-primary to-secondary
-          shadow-xl shadow-cyan-500/40 active:scale-95">
-  <i data-feather="send"></i>
-  JOIN NOW FOR FREE
-</a>
+  <!-- DISCLAIMER -->
+  <p class="text-xs text-gray-400 leading-relaxed">
+    <strong>Disclaimer:</strong> All trading and game-related activities involve risk.
+    Hafiz Aarif Habibi™ provides information for educational purposes only.
+    We do not guarantee profits. Please trade responsibly.
+  </p>
 
-<!-- TRUST -->
-<div class="glass rounded-xl p-4 flex justify-between text-xs">
-  <div class="flex flex-col items-center gap-1">
-    <i data-feather="check-circle" class="text-green-400"></i>Verified
-  </div>
-  <div class="flex flex-col items-center gap-1">
-    <i data-feather="lock" class="text-primary"></i>Secure
-  </div>
-  <div class="flex flex-col items-center gap-1">
-    <i data-feather="trending-up" class="text-secondary"></i>Growth
-  </div>
-  <div class="flex flex-col items-center gap-1">
-    <i data-feather="star" class="text-primary"></i>Top Rated
-  </div>
-</div>
-
-<!-- DISCLAIMER -->
-<p class="text-xs text-gray-400 leading-relaxed">
-  <strong>Disclaimer:</strong> All trading and game-related activities involve risk.
- Hafiz Aarif Habibi™
- provides information for educational and entertainment purposes only.
-  We do not guarantee profits. Please trade responsibly.
-</p>
-
-<!-- FOOTER LINKS -->
-<p class="text-[11px] text-gray-500">
-  <a href="https://t.me/+zmFHtI8Orr8yZTE1" class="text-primary">Privacy Policy</a> |
-  <a href="https://t.me/+zmFHtI8Orr8yZTE1" class="text-primary">Contact Us</a>
-</p>
-
-<p class="text-[11px] text-gray-500">
-  Powered by
-  <a href="https://telegram.me/+TRlJl628l-FkMWE9"
-     target="_blank"
-     class="text-primary font-semibold">NexGroww Agency</a>
-</p>
+  <!-- FOOTER -->
+  <p class="text-[11px] text-gray-500">
+    Powered by
+    <a href="https://telegram.me/+TRlJl628l-FkMWE9"
+       target="_blank"
+       class="text-primary font-semibold">NexGroww Agency</a>
+  </p>
 
 </div>
 
